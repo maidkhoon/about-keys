@@ -6,17 +6,17 @@ interface Props {
 }
 const { property } = Astro.props;
 ---
-<article class="property-card group overflow-hidden rounded-sm border border-black/5 bg-white">
+<article class="property-card group overflow-hidden rounded-sm border border-black/5 bg-white shadow-[0_8px_30px_rgba(17,23,19,.035)] transition-shadow duration-300 hover:shadow-[0_14px_40px_rgba(17,23,19,.10)]">
   <a href={`/properties/${property.id}/`} class="block" aria-label={`View ${property.title}`}>
-    <div class="relative aspect-[4/3] overflow-hidden bg-sage">
+    <div class="relative aspect-[5/4] overflow-hidden bg-sage sm:aspect-[4/3]">
       <img class="property-image h-full w-full object-cover" src={property.image} alt={`Illustrative image for ${property.title}`} loading="lazy" />
       <span class="absolute left-4 top-4 bg-white/95 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[.15em] text-forest">Demo listing</span>
       <span class="absolute bottom-4 right-4 bg-ink/85 px-3 py-2 text-xs text-white">{property.category}</span>
     </div>
-    <div class="p-5 sm:p-6">
+    <div class="p-4 sm:p-6">
       <p class="mb-2 text-xs text-black/55">{property.location}</p>
-      <h3 class="font-display text-2xl leading-tight group-hover:text-forest">{property.title}</h3>
-      <div class="mt-4 flex items-center justify-between gap-3 border-t border-black/10 pt-4">
+      <h3 class="font-display text-[1.35rem] leading-tight group-hover:text-forest sm:text-2xl">{property.title}</h3>
+      <div class="mt-4 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 border-t border-black/10 pt-4">
         <span class="text-sm font-semibold">{property.price}</span>
         <span class="text-xs text-black/55">{property.area}</span>
       </div>
