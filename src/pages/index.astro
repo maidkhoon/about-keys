@@ -1,0 +1,169 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import PropertyCard from "../components/PropertyCard.astro";
+import { properties } from "../data/properties";
+
+const socials = [
+  { label: "Instagram", href: "https://www.instagram.com/about_keys/" },
+  { label: "YouTube", href: "https://www.youtube.com/@about_keys" },
+  { label: "Facebook", href: "https://www.facebook.com/people/About-Keys/61576317646999/" }
+];
+---
+<SiteLayout>
+  <div class="min-h-screen bg-cream">
+    <div class="bg-forest text-white">
+      <div class="container-shell flex min-h-9 items-center justify-between gap-4 text-[10px] tracking-[.12em] sm:text-xs">
+        <p class="truncate">PROPERTY, WITH A CLEARER PERSPECTIVE</p>
+        <p class="hidden sm:block">KARNAL · HARYANA</p>
+      </div>
+    </div>
+    <header class="relative z-20 border-b border-black/10 bg-cream">
+      <nav class="container-shell flex min-h-[82px] items-center justify-between gap-5" aria-label="Main navigation">
+        <a class="flex items-center gap-3" href="/" aria-label="About Keys home">
+          <span class="flex h-11 w-11 items-center justify-center border border-forest text-xl font-display text-forest">A<span class="text-brass">K</span></span>
+          <span>
+            <span class="block text-sm font-bold tracking-[.22em]">ABOUT KEYS</span>
+            <span class="mt-0.5 block text-[9px] tracking-[.19em] text-black/50">KARNAL PROPERTY</span>
+          </span>
+        </a>
+        <div class="hidden items-center gap-8 text-sm md:flex">
+          <a class="hover:text-forest" href="#properties">Properties</a>
+          <a class="hover:text-forest" href="#approach">Our approach</a>
+          <a class="hover:text-forest" href="#stories">Property stories</a>
+        </div>
+        <a class="hidden border border-forest px-5 py-3 text-xs font-bold tracking-wide text-forest transition hover:bg-forest hover:text-white sm:inline-flex" href="#contact">LET'S CONNECT <span class="ml-3">↗</span></a>
+        <button id="menu-toggle" class="inline-flex h-11 w-11 items-center justify-center border border-black/15 text-xl md:hidden" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+      </nav>
+      <div id="mobile-menu" class="container-shell hidden border-t border-black/10 py-4 md:hidden">
+        <div class="flex flex-col gap-4 text-sm">
+          <a href="#properties">Properties</a>
+          <a href="#approach">Our approach</a>
+          <a href="#stories">Property stories</a>
+          <a href="#contact">Let's connect</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="relative isolate overflow-hidden bg-ink text-white">
+        <img class="absolute inset-0 -z-20 h-full w-full object-cover" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90" alt="" fetchpriority="high" />
+        <div class="image-overlay absolute inset-0 -z-10"></div>
+        <div class="container-shell grid min-h-[640px] items-center gap-14 py-20 lg:grid-cols-[1.1fr_.9fr] lg:py-28">
+          <div class="max-w-2xl">
+            <p class="eyebrow mb-7 flex items-center gap-3 text-brass"><span class="h-px w-9 bg-brass"></span> Find your place in Karnal</p>
+            <h1 class="display-title max-w-2xl text-5xl leading-[1.03] sm:text-6xl lg:text-7xl">A place to belong.<br/><span class="italic text-[#e0c79d]">An investment</span><br/>in your future.</h1>
+            <p class="mt-7 max-w-xl text-sm leading-7 text-white/80 sm:text-base">Explore considered property choices, discover the details that matter, and take your next step with clarity.</p>
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a class="inline-flex items-center bg-brass px-6 py-4 text-xs font-bold tracking-wide text-ink transition hover:bg-white" href="#properties">EXPLORE PROPERTIES <span class="ml-5">↗</span></a>
+              <a class="inline-flex items-center border border-white/50 px-6 py-4 text-xs font-bold tracking-wide text-white transition hover:bg-white hover:text-ink" href="#approach">OUR APPROACH</a>
+            </div>
+            <p class="mt-8 max-w-md text-[11px] leading-5 text-white/65">Website concept preview. Listings shown below are illustrative and are not live inventory.</p>
+          </div>
+          <div class="hidden lg:block">
+            <div class="ml-auto max-w-[350px] border border-white/35 bg-ink/35 p-7 backdrop-blur-sm">
+              <p class="eyebrow text-brass">Your next chapter</p>
+              <p class="display-title mt-5 text-3xl leading-snug">The right property begins with the right conversation.</p>
+              <div class="mt-8 flex items-center justify-between border-t border-white/25 pt-5 text-xs text-white/80">
+                <span>Homes · Plots · Commercial</span><span>↗</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-brass"></div>
+      </section>
+
+      <section class="border-b border-black/10 bg-white">
+        <div class="container-shell grid grid-cols-2 gap-y-7 py-8 md:grid-cols-4 md:py-10">
+          <div class="border-r border-black/10 pr-4"><p class="font-display text-2xl sm:text-3xl">Homes</p><p class="mt-1 text-[10px] uppercase tracking-[.14em] text-black/50">Find your space</p></div>
+          <div class="md:border-r md:border-black/10 md:px-7"><p class="font-display text-2xl sm:text-3xl">Plots</p><p class="mt-1 text-[10px] uppercase tracking-[.14em] text-black/50">Build your vision</p></div>
+          <div class="border-r border-black/10 pr-4 md:px-7"><p class="font-display text-2xl sm:text-3xl">Commercial</p><p class="mt-1 text-[10px] uppercase tracking-[.14em] text-black/50">Grow your plans</p></div>
+          <div class="md:pl-7"><p class="font-display text-2xl sm:text-3xl">Karnal</p><p class="mt-1 text-[10px] uppercase tracking-[.14em] text-black/50">Local perspective</p></div>
+        </div>
+      </section>
+
+      <section id="properties" class="container-shell py-20 sm:py-28">
+        <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <p class="eyebrow mb-4 text-forest">A considered shortlist</p>
+            <h2 class="display-title max-w-2xl text-4xl leading-tight sm:text-5xl">Spaces for the life<br class="hidden sm:block"/> you're building.</h2>
+          </div>
+          <p class="max-w-sm text-sm leading-6 text-black/60">A sample of the way property opportunities could be presented. Confirmed listings can replace these demo cards.</p>
+        </div>
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {properties.map((property) => <PropertyCard property={property} />)}
+        </div>
+        <div class="mt-9 flex justify-center"><a class="inline-flex items-center gap-4 border border-forest px-6 py-4 text-xs font-bold tracking-wide text-forest transition hover:bg-forest hover:text-white" href="/properties/">VIEW PROPERTY COLLECTION <span>↗</span></a></div>
+      </section>
+
+      <section id="approach" class="bg-sage py-20 sm:py-24">
+        <div class="container-shell grid gap-12 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
+          <div>
+            <p class="eyebrow mb-4 text-forest">The About Keys approach</p>
+            <h2 class="display-title text-4xl leading-tight sm:text-5xl">Real estate is more than an address.</h2>
+            <p class="mt-6 max-w-lg text-sm leading-7 text-black/65">Your goals, your plans, your next chapter. The experience should start with understanding what matters to you.</p>
+            <a class="mt-8 inline-flex items-center gap-4 border-b border-forest pb-2 text-xs font-bold tracking-wide text-forest" href="#contact">START A CONVERSATION <span>↗</span></a>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <article class="bg-white p-7 sm:p-8"><span class="font-display text-3xl text-brass">01</span><h3 class="mt-7 font-display text-2xl">Understand</h3><p class="mt-3 text-sm leading-6 text-black/60">Start with your purpose, budget, preferred location and timeline.</p></article>
+            <article class="bg-white p-7 sm:p-8"><span class="font-display text-3xl text-brass">02</span><h3 class="mt-7 font-display text-2xl">Explore</h3><p class="mt-3 text-sm leading-6 text-black/60">Compare options and get a clearer view of the available choices.</p></article>
+            <article class="bg-white p-7 sm:p-8"><span class="font-display text-3xl text-brass">03</span><h3 class="mt-7 font-display text-2xl">Evaluate</h3><p class="mt-3 text-sm leading-6 text-black/60">Ask the practical questions and verify key property details before proceeding.</p></article>
+            <article class="bg-forest p-7 text-white sm:p-8"><span class="font-display text-3xl text-brass">04</span><h3 class="mt-7 font-display text-2xl">Move forward</h3><p class="mt-3 text-sm leading-6 text-white/70">Have a direct conversation about the next step that suits your needs.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="stories" class="container-shell py-20 sm:py-28">
+        <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <div class="relative">
+            <img class="aspect-[5/4] w-full object-cover" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85" alt="Illustrative modern home interior" loading="lazy" />
+            <span class="absolute bottom-4 left-4 bg-cream px-4 py-2 text-[10px] font-bold uppercase tracking-[.15em]">Property stories · Demo</span>
+          </div>
+          <div>
+            <p class="eyebrow mb-4 text-forest">See it before you visit</p>
+            <h2 class="display-title text-4xl leading-tight sm:text-5xl">A closer look changes everything.</h2>
+            <p class="mt-6 text-sm leading-7 text-black/65">Property videos and walkthroughs can help visitors get a feel for a space before making an enquiry. Watch About Keys' public content and return here to explore the matching property details.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="inline-flex items-center gap-3 bg-forest px-5 py-4 text-xs font-bold tracking-wide text-white transition hover:bg-ink" href="https://www.youtube.com/@about_keys" target="_blank" rel="noopener noreferrer">WATCH ON YOUTUBE <span>↗</span></a>
+              <a class="inline-flex items-center gap-3 border border-black/20 px-5 py-4 text-xs font-bold tracking-wide transition hover:border-forest" href="https://www.instagram.com/about_keys/" target="_blank" rel="noopener noreferrer">VIEW INSTAGRAM <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-ink py-20 text-white sm:py-24">
+        <div class="container-shell grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div>
+            <p class="eyebrow mb-4 text-brass">Let's talk property</p>
+            <h2 class="display-title max-w-3xl text-4xl leading-tight sm:text-6xl">Your next move starts with a conversation.</h2>
+            <p class="mt-5 max-w-xl text-sm leading-7 text-white/65">Connect with About Keys through its social channels to discuss your property goals. A verified business phone number can be added here later.</p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            {socials.map((social) => <a class="border border-white/30 px-5 py-4 text-xs font-bold tracking-wide transition hover:bg-white hover:text-ink" href={social.href} target="_blank" rel="noopener noreferrer">{social.label} ↗</a>)}
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink text-white/55">
+      <div class="container-shell flex flex-col justify-between gap-4 border-t border-white/15 py-6 text-[10px] sm:flex-row sm:items-center">
+        <p>© {new Date().getFullYear()} About Keys · Website demo concept</p>
+        <p>Illustrative imagery and sample listings — not live property inventory.</p>
+      </div>
+    </footer>
+  </div>
+  <script>
+    const toggle = document.querySelector<HTMLButtonElement>("#menu-toggle");
+    const menu = document.querySelector<HTMLDivElement>("#mobile-menu");
+    toggle?.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      toggle.setAttribute("aria-label", expanded ? "Open navigation" : "Close navigation");
+      if (menu) menu.classList.toggle("hidden", expanded);
+    });
+    menu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+      menu.classList.add("hidden");
+      toggle?.setAttribute("aria-expanded", "false");
+      toggle?.setAttribute("aria-label", "Open navigation");
+    }));
+  </script>
+</SiteLayout>
