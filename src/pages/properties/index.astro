@@ -1,0 +1,24 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import PropertyCard from "../../components/PropertyCard.astro";
+import { properties } from "../../data/properties";
+---
+<SiteLayout title="Properties | About Keys" description="Explore illustrative residential, plot and commercial property cards in the About Keys demo.">
+  <div class="min-h-screen bg-cream">
+    <header class="border-b border-black/10 bg-cream">
+      <nav class="container-shell flex min-h-[82px] items-center justify-between gap-4">
+        <a class="flex items-center gap-3" href="/"><span class="flex h-11 w-11 items-center justify-center border border-forest font-display text-xl text-forest">A<span class="text-brass">K</span></span><span class="text-sm font-bold tracking-[.22em]">ABOUT KEYS</span></a>
+        <a class="text-xs font-bold text-forest" href="/">← BACK HOME</a>
+      </nav>
+    </header>
+    <main class="container-shell py-16 sm:py-24">
+      <p class="eyebrow mb-4 text-forest">Property collection · Demo</p>
+      <h1 class="display-title text-5xl sm:text-6xl">Explore the possibilities.</h1>
+      <p class="mt-5 max-w-2xl text-sm leading-7 text-black/60">These sample cards demonstrate the proposed listing experience. No property price, address or availability is being represented as verified information.</p>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {properties.map((property) => <PropertyCard property={property} />)}
+      </div>
+    </main>
+    <footer class="bg-ink py-6 text-center text-xs text-white/60">About Keys website concept · Sample listings only</footer>
+  </div>
+</SiteLayout>
