@@ -18,12 +18,12 @@ const socials = [
       </div>
     </div>
     <header class="relative z-20 border-b border-black/10 bg-cream">
-      <nav class="container-shell flex min-h-[82px] items-center justify-between gap-5" aria-label="Main navigation">
-        <a class="flex items-center gap-3" href="/" aria-label="About Keys home">
-          <span class="flex h-11 w-11 items-center justify-center border border-forest text-xl font-display text-forest">A<span class="text-brass">K</span></span>
+      <nav class="container-shell flex min-h-[70px] items-center justify-between gap-3 sm:min-h-[82px] sm:gap-5" aria-label="Main navigation">
+        <a class="flex min-w-0 items-center gap-2.5 sm:gap-3" href="/" aria-label="About Keys home">
+          <span class="flex h-10 w-10 shrink-0 items-center justify-center border border-forest text-xl font-display text-forest sm:h-11 sm:w-11">A<span class="text-brass">K</span></span>
           <span>
-            <span class="block text-sm font-bold tracking-[.22em]">ABOUT KEYS</span>
-            <span class="mt-0.5 block text-[9px] tracking-[.19em] text-black/50">KARNAL PROPERTY</span>
+            <span class="block text-[12px] font-bold tracking-[.18em] sm:text-sm sm:tracking-[.22em]">ABOUT KEYS</span>
+            <span class="mt-0.5 block text-[8px] tracking-[.14em] text-black/50 sm:text-[9px] sm:tracking-[.19em]">KARNAL PROPERTY</span>
           </span>
         </a>
         <div class="hidden items-center gap-8 text-sm md:flex">
@@ -32,7 +32,7 @@ const socials = [
           <a class="hover:text-forest" href="#stories">Property stories</a>
         </div>
         <a class="hidden border border-forest px-5 py-3 text-xs font-bold tracking-wide text-forest transition hover:bg-forest hover:text-white sm:inline-flex" href="#contact">LET'S CONNECT <span class="ml-3">↗</span></a>
-        <button id="menu-toggle" class="inline-flex h-11 w-11 items-center justify-center border border-black/15 text-xl md:hidden" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+        <button id="menu-toggle" class="inline-flex h-10 w-10 shrink-0 items-center justify-center border border-black/15 text-xl transition hover:bg-forest hover:text-white md:hidden" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu">☰</button>
       </nav>
       <div id="mobile-menu" class="container-shell hidden border-t border-black/10 py-4 md:hidden">
         <div class="flex flex-col gap-4 text-sm">
@@ -50,14 +50,14 @@ const socials = [
         <div class="image-overlay absolute inset-0 -z-10"></div>
         <div class="container-shell grid min-h-[640px] items-center gap-14 py-20 lg:grid-cols-[1.1fr_.9fr] lg:py-28">
           <div class="max-w-2xl">
-            <p class="eyebrow mb-7 flex items-center gap-3 text-brass"><span class="h-px w-9 bg-brass"></span> Find your place in Karnal</p>
-            <h1 class="display-title max-w-2xl text-5xl leading-[1.03] sm:text-6xl lg:text-7xl">A place to belong.<br/><span class="italic text-[#e0c79d]">An investment</span><br/>in your future.</h1>
-            <p class="mt-7 max-w-xl text-sm leading-7 text-white/80 sm:text-base">Explore considered property choices, discover the details that matter, and take your next step with clarity.</p>
-            <div class="mt-9 flex flex-wrap gap-3">
-              <a class="inline-flex items-center bg-brass px-6 py-4 text-xs font-bold tracking-wide text-ink transition hover:bg-white" href="#properties">EXPLORE PROPERTIES <span class="ml-5">↗</span></a>
-              <a class="inline-flex items-center border border-white/50 px-6 py-4 text-xs font-bold tracking-wide text-white transition hover:bg-white hover:text-ink" href="#approach">OUR APPROACH</a>
+            <p class="eyebrow mb-5 flex items-center gap-3 text-brass sm:mb-7"><span class="h-px w-9 bg-brass"></span> Find your place in Karnal</p>
+            <h1 class="display-title max-w-2xl text-[clamp(2.65rem,10vw,4rem)] leading-[1.02] sm:text-6xl lg:text-7xl">A place to belong.<br/><span class="italic text-[#e0c79d]">An investment</span><br/>in your future.</h1>
+            <p class="mt-5 max-w-xl text-sm leading-6 text-white/85 sm:mt-7 sm:text-base sm:leading-7">Explore considered property choices, discover the details that matter, and take your next step with clarity.</p>
+            <div class="mt-7 grid grid-cols-1 gap-3 min-[420px]:flex min-[420px]:flex-wrap sm:mt-9">
+              <a class="inline-flex min-h-12 items-center justify-center bg-brass px-5 py-4 text-xs font-bold tracking-wide text-ink transition hover:bg-white sm:px-6" href="#properties">EXPLORE PROPERTIES <span class="ml-5">↗</span></a>
+              <a class="inline-flex min-h-12 items-center justify-center border border-white/50 px-5 py-4 text-xs font-bold tracking-wide text-white transition hover:bg-white hover:text-ink sm:px-6" href="#approach">OUR APPROACH</a>
             </div>
-            <p class="mt-8 max-w-md text-[11px] leading-5 text-white/65">Website concept preview. Listings shown below are illustrative and are not live inventory.</p>
+            <p class="mt-6 max-w-md text-[11px] leading-5 text-white/70 sm:mt-8">Website concept preview. Listings shown below are illustrative and are not live inventory.</p>
           </div>
           <div class="hidden lg:block">
             <div class="ml-auto max-w-[350px] border border-white/35 bg-ink/35 p-7 backdrop-blur-sm">
@@ -81,7 +81,7 @@ const socials = [
         </div>
       </section>
 
-      <section id="properties" class="container-shell py-20 sm:py-28">
+      <section id="properties" class="container-shell py-14 sm:py-28">
         <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
             <p class="eyebrow mb-4 text-forest">A considered shortlist</p>
@@ -89,13 +89,20 @@ const socials = [
           </div>
           <p class="max-w-sm text-sm leading-6 text-black/60">A sample of the way property opportunities could be presented. Confirmed listings can replace these demo cards.</p>
         </div>
-        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="property-filters mt-7 flex gap-2 overflow-x-auto pb-2 sm:mt-8" role="group" aria-label="Filter sample properties">
+          <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All properties</button>
+          <button class="filter-chip" type="button" data-filter="homes" aria-pressed="false">Homes</button>
+          <button class="filter-chip" type="button" data-filter="plots" aria-pressed="false">Plots</button>
+          <button class="filter-chip" type="button" data-filter="commercial" aria-pressed="false">Commercial</button>
+        </div>
+        <p id="property-filter-status" class="mt-2 text-xs text-black/50" aria-live="polite">Showing all sample listings</p>
+        <div id="property-grid" class="mt-5 grid gap-4 sm:mt-7 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {properties.map((property) => <PropertyCard property={property} />)}
         </div>
-        <div class="mt-9 flex justify-center"><a class="inline-flex items-center gap-4 border border-forest px-6 py-4 text-xs font-bold tracking-wide text-forest transition hover:bg-forest hover:text-white" href="/properties/">VIEW PROPERTY COLLECTION <span>↗</span></a></div>
+        <div class="mt-7 flex justify-center sm:mt-9"><a class="inline-flex items-center gap-4 border border-forest px-6 py-4 text-xs font-bold tracking-wide text-forest transition hover:bg-forest hover:text-white" href="/properties/">VIEW PROPERTY COLLECTION <span>↗</span></a></div>
       </section>
 
-      <section id="approach" class="bg-sage py-20 sm:py-24">
+      <section id="approach" class="bg-sage py-14 sm:py-24">
         <div class="container-shell grid gap-12 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
           <div>
             <p class="eyebrow mb-4 text-forest">The About Keys approach</p>
@@ -112,7 +119,7 @@ const socials = [
         </div>
       </section>
 
-      <section id="stories" class="container-shell py-20 sm:py-28">
+      <section id="stories" class="container-shell py-14 sm:py-28">
         <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div class="relative">
             <img class="aspect-[5/4] w-full object-cover" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85" alt="Illustrative modern home interior" loading="lazy" />
@@ -130,7 +137,7 @@ const socials = [
         </div>
       </section>
 
-      <section id="contact" class="bg-ink py-20 text-white sm:py-24">
+      <section id="contact" class="bg-ink py-14 text-white sm:py-24">
         <div class="container-shell grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
             <p class="eyebrow mb-4 text-brass">Let's talk property</p>
@@ -151,6 +158,14 @@ const socials = [
       </div>
     </footer>
   </div>
+  <div class="mobile-action-dock sm:hidden" aria-label="Quick links">
+    <a href="#properties"><span aria-hidden="true">⌂</span> Explore homes</a>
+    <a href="#contact"><span aria-hidden="true">↗</span> Connect</a>
+  </div>
+  <div class="mobile-action-dock sm:hidden" aria-label="Quick links">
+    <a href="#properties"><span aria-hidden="true">⌂</span> Explore homes</a>
+    <a href="#contact"><span aria-hidden="true">↗</span> Connect</a>
+  </div>
   <script>
     const toggle = document.querySelector<HTMLButtonElement>("#menu-toggle");
     const menu = document.querySelector<HTMLDivElement>("#mobile-menu");
@@ -164,6 +179,25 @@ const socials = [
       menu.classList.add("hidden");
       toggle?.setAttribute("aria-expanded", "false");
       toggle?.setAttribute("aria-label", "Open navigation");
+    }));
+
+    const filterButtons = document.querySelectorAll<HTMLButtonElement>("[data-filter]");
+    const propertyCards = document.querySelectorAll<HTMLElement>("#property-grid .property-card");
+    const filterStatus = document.querySelector<HTMLElement>("#property-filter-status");
+    filterButtons.forEach((button) => button.addEventListener("click", () => {
+      const filter = button.dataset.filter ?? "all";
+      let visible = 0;
+      filterButtons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+      propertyCards.forEach((card) => {
+        const show = filter === "all" || card.dataset.category === filter;
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+      if (filterStatus) filterStatus.textContent = `Showing ${visible} sample ${visible === 1 ? "listing" : "listings"}`;
     }));
   </script>
 </SiteLayout>
