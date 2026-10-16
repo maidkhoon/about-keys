@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --color-ink: #111713;
+  --color-forest: #173d2d;
+  --color-brass: #c7a66a;
+  --color-cream: #f8f7f2;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-cream);
+}
+
+body {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: Inter, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #dfe8df;
+  color: #173d2d;
+}
+
+a {
+  text-underline-offset: 4px;
+}
+
+:focus-visible {
+  outline: 3px solid #c7a66a;
+  outline-offset: 3px;
+}
+
+.container-shell {
+  width: min(1240px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  letter-spacing: .19em;
+  text-transform: uppercase;
+  font-size: .68rem;
+  font-weight: 700;
+}
+
+.display-title {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -.045em;
+  font-weight: 400;
+}
+
+.image-overlay {
+  background: linear-gradient(90deg, rgba(10, 20, 15, .76) 0%, rgba(10, 20, 15, .38) 55%, rgba(10, 20, 15, .08) 100%);
+}
+
+.property-image {
+  transition: transform .6s cubic-bezier(.2,.7,.2,1);
+}
+
+.property-card:hover .property-image {
+  transform: scale(1.045);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
